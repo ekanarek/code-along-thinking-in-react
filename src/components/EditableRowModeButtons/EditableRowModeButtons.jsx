@@ -1,4 +1,4 @@
-function EditableRowModeButtons({ isEditing }) {
+export default function EditableRowModeButtons({ isEditing }) {
     return isEditing ? (
         <td>
             <button>Save</button>

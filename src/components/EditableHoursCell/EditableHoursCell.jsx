@@ -1,9 +1,9 @@
-export default function EditableDescriptionCell({ value, isEditing }) {
+export default function EditableHoursCell({ value, isEditing }) {
     return isEditing ? (
         <td>
             <input type="text" value={value} />
         </td>
     ) : (
         <td>{value}</td>
-    );
+    )
 }
