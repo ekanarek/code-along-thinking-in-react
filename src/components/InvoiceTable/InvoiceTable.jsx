@@ -1,8 +1,8 @@
 import './InvoiceTable.css';
-import { EditableRowModeButtons } from '../EditableRowModeButtons/EditableRowModeButtons.jsx';
-import { EditableDescriptionCell } from '../EditableDescriptionCell/EditableDescriptionCell.jsx';
-import { EditableRateCell } from '../EditableRateCell/EditableRateCell.jsx';
-import { EditableHoursCell } from '../EditableHoursCell/EditableHoursCell.jsx';
+import { EditableRowModeButtons } from '../EditableRowModeButtons.jsx';
+import { EditableDescriptionCell } from '../EditableDescriptionCell.jsx';
+import { EditableRateCell } from '../EditableRateCell.jsx';
+import { EditableHoursCell } from '../EditableHoursCell.jsx';
 
 function InvoiceTable() {
     return (
