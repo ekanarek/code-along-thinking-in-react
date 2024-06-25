@@ -4,7 +4,7 @@ import EditableHoursCell from "./EditableHoursCell";
 import EditableRateCell from "./EditableRateCell";
 import EditableRowModeButtons from "./EditableRowModeButtons";
 
-function InvoiceTableRow( { initialInvoiceData, initialIsEditing }) {
+export default function InvoiceTableRow( { initialInvoiceData, initialIsEditing }) {
     const { description, rate, hours } = initialInvoiceData;
 
     return (
