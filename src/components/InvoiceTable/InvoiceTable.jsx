@@ -44,7 +44,7 @@ function InvoiceTable({ initialInvoiceList }) {
             </thead>
             <tbody>{rows}</tbody>
             <tfoot>
-                <InvoiceTableAddButton />
+                <InvoiceTableAddButton onClick={addInvoiceRow} />
             </tfoot>
         </table>
     )
