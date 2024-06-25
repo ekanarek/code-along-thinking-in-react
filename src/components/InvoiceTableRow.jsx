@@ -3,9 +3,14 @@ import EditableDescriptionCell from "./EditableDescriptionCell";
 import EditableHoursCell from "./EditableHoursCell";
 import EditableRateCell from "./EditableRateCell";
 import EditableRowModeButtons from "./EditableRowModeButtons";
+import { useState } from "react";
 
 export default function InvoiceTableRow( { initialInvoiceData, initialIsEditing }) {
-    const { description, rate, hours } = initialInvoiceData;
+    const [isEditing, setIsEditing] = useState(initialIsEditing);
+
+    const [description, setDescription] = useState(initialInvoiceData.description);
+    const [rate, setRate] = useState(initialInvoiceData.rate);
+    const [hours, setHours] = useState(initialInvoiceData.hours);
 
     return (
         <tr>

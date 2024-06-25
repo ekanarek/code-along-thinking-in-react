@@ -2,8 +2,11 @@ import './InvoiceTable.css';
 import InvoiceTableHeader from '../InvoiceTableHeader.jsx';
 import InvoiceTableAddButton from '../InvoiceTableAddButton.jsx';
 import InvoiceTableRow from '../InvoiceTableRow.jsx';
+import { useState } from 'react';
 
 function InvoiceTable({ initialInvoiceList }) {
+    const [invoiceList, setInvoiceList] = useState(initialInvoiceList);
+    
     const rows = initialInvoiceList.map((invoiceItem) => {
         const { id, description, rate, hours } = invoiceItem;
 
