@@ -5,7 +5,7 @@ import EditableRateCell from "./EditableRateCell";
 import EditableRowModeButtons from "./EditableRowModeButtons";
 import { useState } from "react";
 
-export default function InvoiceTableRow( { initialInvoiceData, initialIsEditing }) {
+export default function InvoiceTableRow( { initialInvoiceData, initialIsEditing, onDeleteRow }) {
     const [isEditing, setIsEditing] = useState(initialIsEditing);
 
     const [description, setDescription] = useState(initialInvoiceData.description);
@@ -21,6 +21,7 @@ export default function InvoiceTableRow( { initialInvoiceData, initialIsEditing 
                 isEditing={isEditing}
                 onEditClick={setEditMode} 
                 onSaveClick={setNormalMode} 
+                onDeleteClick={onDeleteRow} 
             />
             <EditableDescriptionCell 
                 value={description} 
