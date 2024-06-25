@@ -12,9 +12,16 @@ export default function InvoiceTableRow( { initialInvoiceData, initialIsEditing 
     const [rate, setRate] = useState(initialInvoiceData.rate);
     const [hours, setHours] = useState(initialInvoiceData.hours);
 
+    const setEditMode = () => setIsEditing(true);
+    const setNormalMode = () => setIsEditing(false);
+
     return (
         <tr>
-            <EditableRowModeButtons isEditing={initialIsEditing} />
+            <EditableRowModeButtons 
+                isEditing={isEditing}
+                onEditClick={setEditMode} 
+                onSaveClick={setNormalMode} 
+            />
             <EditableDescriptionCell value={description} isEditing={initialIsEditing} />
             <EditableRateCell value={rate} isEditing={initialIsEditing} />
             <EditableHoursCell value={hours} isEditing ={initialIsEditing} />
