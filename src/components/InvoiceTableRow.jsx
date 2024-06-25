@@ -22,9 +22,21 @@ export default function InvoiceTableRow( { initialInvoiceData, initialIsEditing 
                 onEditClick={setEditMode} 
                 onSaveClick={setNormalMode} 
             />
-            <EditableDescriptionCell value={description} isEditing={initialIsEditing} />
-            <EditableRateCell value={rate} isEditing={initialIsEditing} />
-            <EditableHoursCell value={hours} isEditing ={initialIsEditing} />
+            <EditableDescriptionCell 
+                value={description} 
+                isEditing={isEditing} 
+                onValueChange={setDescription}
+            />
+            <EditableRateCell 
+                value={rate} 
+                isEditing={isEditing} 
+                onValueChange={setRate}
+            />
+            <EditableHoursCell 
+                value={hours} 
+                isEditing={isEditing} 
+                onValueChange={setHours} 
+            />
             <td>{formatCurrency(rate * hours)}</td>
         </tr>
     )
