@@ -3,10 +3,15 @@ import EditableRowModeButtons from '../EditableRowModeButtons.jsx';
 import EditableDescriptionCell from '../EditableDescriptionCell.jsx';
 import EditableRateCell from '../EditableRateCell.jsx';
 import EditableHoursCell from '../EditableHoursCell.jsx';
+import InvoiceTableHeader from '../InvoiceTableHeader.jsx';
+import InvoiceTableAddButton from '../InvoiceTableAddButton.jsx';
 
 function InvoiceTable() {
     return (
         <table>
+            <thead>
+                <InvoiceTableHeader />
+            </thead>
             <tbody>
                 <tr>
                     <EditableRowModeButtons isEditing={false} />
@@ -22,6 +27,9 @@ function InvoiceTable() {
                     <EditableHoursCell value={8} isEditing={true} />
                 </tr>
             </tbody>
+            <tfoot>
+                <InvoiceTableAddButton />
+            </tfoot>
         </table>
     )
 }
